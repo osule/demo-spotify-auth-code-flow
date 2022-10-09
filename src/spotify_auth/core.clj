@@ -50,10 +50,7 @@
      :headers {"Authorization" (str "Basic " AUTH-BASIC-TOKEN) "Content-Type" "application/form-data"}
      :form-params {"code" code
                    "redirect_uri"  SPOTIFY_REDIRECT_URI
-                   "grant_type" "authorization_code"}
-     :body (json/write-str {"code" code
-                            "redirect_uri"  SPOTIFY_REDIRECT_URI
-                            "grant_type" "authorization_code"})}))
+                   "grant_type" "authorization_code"}}))
 
 ; Hello page
 (defn hello [req]
